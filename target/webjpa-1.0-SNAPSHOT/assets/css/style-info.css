@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@keyframes tilt-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    10%, 90% { transform: translate(-5px, 0) rotate(-5deg); }
+    20%, 80% { transform: translate(5px, 0) rotate(5deg); }
+    30%, 50%, 70% { transform: translate(-5px, 0) rotate(-5deg); }
+    40%, 60% { transform: translate(5px, 0) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9f3647;
+}
+
+body {
+    background-color: #181419;
+    color: white;
+    display: block;
+}
+
+/* Estilos por defecto (para pantallas más grandes) */
+body {
+    font-size: 16px;
+  }
+  
+  /* Estilos para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Estilos para pantallas aún más pequeñas */
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: #9f3647;
+    color: #ffffff;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    z-index: 10;
+
+    .anclaLogo {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding-left: 20px;
+    }
+    
+    .anclaLogo:hover {
+        animation-name: tilt-shaking;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
+
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+.listaNav {
+    list-style: none;
+    display: flex;
+    align-items: center
+}
+
+.listaItem {
+    margin-right: 20px;
+}
+
+.linkNav {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+}
+
+.linkNav:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.botonNegro {
+    background-color: #181419;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.botonNegro:hover {
+    background-color: #832438;
+}
+
+.detalle {
+    padding-top: 50px;
+    background: linear-gradient(to right top, #6d6969a7, #6d6969a7), url("../img/mario-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+
+    .contenedorDetalle {
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 60px;
+
+        img {
+            border-radius: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .detalle {
+        height: initial;
+
+        .contenedorDetalle {
+            flex-direction: column;
+            row-gap: 20px;
+
+            img {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}
+
+.trailer {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 70px;
+
+    .contenedorInfo {
+        .redes {
+            margin-bottom: 20px;
+    
+            ul {
+                list-style: none;
+                display: flex;
+                column-gap: 20px;
+    
+                li {
+                    a {
+                        text-decoration: none;
+                        color: #ffffff;
+                        font-size: 2.5rem;
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+
+        .info {
+            table {
+                width: 100%;
+                border-collapse: separate;
+                text-indent: initial;
+                border-spacing: 10px;
+                display: table;
+                box-sizing: border-box;
+
+                thead {
+                    display: table-header-group;
+                    vertical-align: middle;
+                    unicode-bidi: isolate;
+                    border-color: inherit;
+
+                    tr {
+                        th {
+                            display: table-cell;
+                            vertical-align: inherit;
+                            font-weight: bold;
+                            text-align: -internal-center;
+                            unicode-bidi: isolate;
+                        }
+                    }
+                }
+
+                tbody {
+                    display: table-row-group;
+                    vertical-align: middle;
+                    unicode-bidi: isolate;
+                    border-color: inherit;
+
+                    tr {
+                        td {
+                            font-size: 1.2rem;
+                            padding: 10px;
+
+                            strong {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .trailer {
+        width: 95%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .contenedorInfo {
+            width: 100%;
+
+            .redes {
+                width: 100%;
+
+                ul {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        a {
+                            font-size: 2rem;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+footer {
+    background-color: #9f3647;
+    color: #ffffff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .flechaArriba {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+    }
+}

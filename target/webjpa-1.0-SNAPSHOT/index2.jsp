@@ -1,0 +1,243 @@
+<%-- Autor: josedev72 --%>
+
+<%@page import="logica.Usuario"%>
+<%@page import="java.util.List"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="estas">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>CAC-Movies</title>
+</head>
+
+<body>
+    <header class="header">
+        <a class="anclaLogo" href="#" onclick="showLoginRegister(); return false;">
+            <i class="fa fa-film"></i>
+            <span>CAC-MOVIES</span>
+        </a>
+        <nav class="navegacion">
+    
+            <ul class="listaNav">
+                <li class="listaItem">
+                    <a class="linkNav" href="#tendencias">Tendencias</a>
+                </li>
+    
+                <li class="listaItem">
+                    <a class="linkNav" href="#tendencias">Tendencias</a>
+                </li>
+    
+                <li class="listaItem"  id="registerItem">
+                    <a class="linkNav" href="registrarse.html">Registrarse</a>
+                </li>
+    
+                <li class="listaItem" id="loginItem">
+                    <a class="linkNav iniciarSesion" href="pages/iniciosesion.html">Iniciar Sesión</a>
+                </li>
+    
+                <li class="listaItem" id="saludoItem">
+                    <span class="bienvenida" id="welcomeMessage"></span>
+                </li>
+    
+                <li class="listaItem" id="API PokemÃ³n">
+                    <a class="linkNav Api" href="pages/index_api2.html">API</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="main" class="main">
+        <section class="sectionPrincipal">
+            <h1 class="tituloPrincipal">
+                Pelí­culas y series ilimitadas <br>en un solo lugar
+            </h1>
+            <h2 class="subtituloPrincipal">
+                Disfruta donde quieras. <br>Cancela en cualquier momento.
+            </h2>
+            <a class="botonRegistrarse" href="pages/registrarse.html">Regi­strate</a>
+        </section>
+
+        <section class="buscadorPrincipal">
+            <h2 class="tituloSection">¿Qué estas buscando para ver?</h2>
+            <form class="buscadorPeliculas">
+                <input class="inputBuscador" type="text" placeholder="Buscar..." id="buscar" name="buscar">
+                <input class="botonBuscador" type="submit" value="Buscar">
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="tendencias" class="peliculasTendencia">
+            <h3 class="tituloSection">Las tendencias de hoy</h3>
+            <div class="peliculas" id="tendenciasContainer">
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\dune.jpg" alt="Dune: Part Two" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>Dune: Part Two</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\kung fu panda.jpg" alt="Kung Fu Panda 4" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>Kung Fu Panda 4</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\godzilla x kingkong.jpg" alt="Godzilla x Kong: The New Empire" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>Godzilla x Kong: The New Empire</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\alienoid.jpg" alt="Alienoid" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>Alienoid</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\roadhouse.jpg" alt="Road House" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>Road House</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\wages.jpg" alt="The Wages of Fear" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>The Wages of Fear</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\after the pandemic.jpg" alt="After the Pandemic" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>After the Pandemic</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\madame web.jpg" alt="Madame Web" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>Madame Web</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="peliculas">
+                    <a href="pages/info.html">
+                        <div class="pelicula">
+                            <img class="imgTendencia" src="assets\img\peliculas\migration.jpg" alt="Migration" loading="lazy">
+                            <div class="tituloPelicula">
+                                <h4>Migration</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="boton">Anterior</button>
+            <button class="boton">Siguiente</button>
+        </section>
+
+        <hr>
+
+        <section class="peliculasAclamadas">
+            <h3 class="tituloSection">Las más aclamadas</h3>
+            <div class="aclamadas" id="aclamadasContainer">
+                <a href="pages/info.html">
+                    <div class="peliculaItem">
+                        <img class="imgAclamada" src="assets/img/peliculas/wages.jpg" alt="The Wages of Fear" loading="lazy">
+                    </div>
+                </a>
+
+                <a href="pages/info.html">
+                    <div class="peliculaItem">
+                        <img class="imgAclamada" src="assets/img/peliculas/alienoid.jpg" alt="Alienoid" loading="lazy">
+                    </div>
+                </a>
+
+                <a href="pages/info.html">
+                    <div class="peliculaItem">
+                        <img class="imgAclamada" src="assets/img/peliculas/roadhouse.jpg" alt="Road House" loading="lazy">
+                    </div>
+                </a>
+
+                <a href="pages/info.html">
+
+                    <div class="pelicula">
+                        <img class="imgTendencia" src="assets\img\peliculas\dune.jpg" alt="Dune: Part Two" loading="lazy">
+                        <div class="tituloPelicula">
+                            <h4>Dune: Part Two</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="pages/info.html">
+                    <div class="peliculaItem">
+                        <img class="imgAclamada" src="assets/img/peliculas/dune.jpg" alt="Dune: Part Two" loading="lazy">
+                    </div>
+                </a>
+
+                <a href="pages/info.html">
+                    <div class="peliculaItem">
+                        <img class="imgAclamada" src="assets/img/peliculas/hard hit.jpg" alt="Hard Hit" loading="lazy">
+                    </div>
+                </a>
+
+                <a href="pages/info.html">
+                    <div class="peliculaItem">
+                        <img class="imgAclamada" src="assets/img/peliculas/madame web.jpg" alt="Madame Web" loading="lazy">
+                    </div>
+                </a>
+
+                <a href="pages/info.html">
+                    <div class="peliculaItem">
+                        <img class="imgAclamada" src="assets\img\peliculas\creation of the gods.jpg" alt="Creation of the Gods" loading="lazy">
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="js/pie.js"></script>
+
+    <script src="js/saludo.js"></script>
+</body>
+</html>

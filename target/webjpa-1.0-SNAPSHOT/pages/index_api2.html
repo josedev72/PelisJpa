@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- mis estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Información de Personajes Pokémon</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form id="loginForm" class="centered-form d-flex justify-content-center">
+            <h2 class="form-title">Información de Personajes Pokémon</h2>
+
+            <div class="form-group">
+                <label for="pokemon-name">Nombre del Pokémon:</label>
+                <input type="text" class="form-control" id="pokemon-name" placeholder="Ingresa el nombre del Pokémon">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" onclick="getPokemonInfo()">Obtener información</button>
+            <br>
+            <a href="../index.html" class="btn btn-secondary">Volver al Inicio</a>
+
+            <div id="pokemon-details"></div>
+        </form>
+      </div>
+
+
+      <script src="../js/pokemon.js"></script>
+</body>
+</html>
