@@ -6,7 +6,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import logica.Director;
 import logica.Estrellas;
 
-@Generated(value="EclipseLink-2.7.12.v20230209-rNA", date="2024-07-14T23:38:35")
+@Generated(value="EclipseLink-2.7.12.v20230209-rNA", date="2024-07-15T14:54:26")
 @StaticMetamodel(Pelicula.class)
 public class Pelicula_ { 
 

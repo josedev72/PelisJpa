@@ -43,8 +43,12 @@
                     <span class="bienvenida" id="welcomeMessage"></span>
                 </li>
     
-                <li class="listaItem" id="API PokemÃ³n">
+                <li class="listaItem" id="API Pokemon">
                     <a class="linkNav Api" href="pages/index_api2.html">API</a>
+                </li>
+                
+                <li class="listaItem" id="crud">
+                    <a class="crud" href="crudadmin.html">A.B.M.</a>
                 </li>
             </ul>
         </nav>
