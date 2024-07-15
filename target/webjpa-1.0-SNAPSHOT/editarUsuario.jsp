@@ -1,8 +1,4 @@
-<%-- 
-    Document   : editarUsuario
-    Created on : 14 jul 2024, 17:31:24
-    Author     : joseg
---%>
+<%-- Autor: josedev72 --%>
 
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>

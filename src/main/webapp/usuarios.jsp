@@ -25,7 +25,7 @@
             </div>
             
             <div class="col-12 text-left">
-                <a href="nuevoUsaurio.html" class="btn btn-success">Nuevo Usuario</a>
+                <a href="registrarse.html" class="btn btn-success">Nuevo Usuario</a>
             </div>
             
         </div>

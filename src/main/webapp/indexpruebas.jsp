@@ -28,7 +28,7 @@
             <button type="submit"> Mostrar</button>
         </form>
         
-        <h1>Eliminarar Usuarios</h1>
+        <h1>Eliminar Usuarios</h1>
         <form action="SvUsuariosEliminar" method="POST">
             <p><label>Id: </label><input type="text" id="id" name="id"> </p>
             <button type="submit"> Eliminar usuario</button>
