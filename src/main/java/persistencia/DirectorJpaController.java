@@ -1,3 +1,4 @@
+
 package persistencia;
 
 import java.io.Serializable;
@@ -15,7 +16,6 @@ import javax.persistence.Persistence;
 import logica.Director;
 import persistencia.exceptions.NonexistentEntityException;
 
-
 public class DirectorJpaController implements Serializable {
 
     public DirectorJpaController(EntityManagerFactory emf) {
@@ -30,8 +30,7 @@ public class DirectorJpaController implements Serializable {
     public DirectorJpaController() {
         emf = Persistence.createEntityManagerFactory("webjpaPU");
     }
-    
-    
+        
 
     public void create(Director director) {
         if (director.getPeliculas() == null) {

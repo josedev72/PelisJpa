@@ -26,4 +26,14 @@ public class Controladora {
     public void editarUsuario(Usuario usuario) {
         controlPersis.editarUsuario(usuario);
     }
+
+    //Director
+    public List<Director> traerDirectores() {
+        return controlPersis.traerDirectores();
+    }
+    
+    // Pelicula
+    public List<Pelicula> traerPeliculas() {
+        return controlPersis.traerPeliculas();
+    }
 }
