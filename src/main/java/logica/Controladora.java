@@ -14,6 +14,8 @@ public class Controladora {
     public List<Usuario> traerUsuarios(){
         return controlPersis.traerUsuarios();
     }
+    
+    
 
     public void eliminarUsuario(int id) {
         controlPersis.eliminarUsuario(id);
@@ -35,5 +37,14 @@ public class Controladora {
     // Pelicula
     public List<Pelicula> traerPeliculas() {
         return controlPersis.traerPeliculas();
+    }
+
+    public void crearPelicula(Pelicula peli) {
+        controlPersis.crearPelicula(peli);
+    }
+
+    //Estrellas
+    public List<Estrellas> traerEstrellas() {
+        return controlPersis.traerEstrellas();
     }
 }

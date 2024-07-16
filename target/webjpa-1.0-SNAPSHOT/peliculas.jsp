@@ -27,7 +27,7 @@
             </div>
             
             <div class="col-12 text-left">
-                <a href="nuevaPelícula.html" class="btn btn-success">Nueva Película</a>
+                <a href="SvObtenerDirectorEstrellas" class="btn btn-success">Nueva Película</a>
             </div>
             
         </div>
@@ -59,8 +59,8 @@
                                     <td><%= pelicula.getGenero()%></td>
                                     <td><%= pelicula.getCalificacion()%></td>
                                     <td><%= pelicula.getAnio()%></td>
-                                    <td><%= pelicula.getEstrellas()%></td>
-                                    <td><%= pelicula.getDirector()%></td>
+                                    <td><%= pelicula.getId_estrellas()%></td>
+                                    <td><%= pelicula.getId_director()%></td>
                                     <td>
                                         <a href="editar?id=<%= pelicula.getId() %>" class="btn btn-primary btn-sm">Editar</a>
                                         <a href="borrar?id=<%= pelicula.getId() %>" class="btn btn-danger btn-sm">Borrar</a>

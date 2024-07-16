@@ -3,14 +3,10 @@ package logica;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.Data;
@@ -27,9 +23,6 @@ public class Director implements Serializable {
     private Date fecha_nac;
     private String nacionalidad;
 
-    @OneToMany(mappedBy = "director", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Pelicula> peliculas = new HashSet<>();
-
     public Director() {
     }
 
@@ -40,7 +33,7 @@ public class Director implements Serializable {
         this.fecha_nac = fecha_nac;
         this.nacionalidad = nacionalidad;
     }
-
+    
     public Long getId() {
         return id;
     }
@@ -81,13 +74,6 @@ public class Director implements Serializable {
         this.nacionalidad = nacionalidad;
     }
 
-    public Set<Pelicula> getPeliculas() {
-        return peliculas;
-    }
-
-    public void setPeliculas(Set<Pelicula> peliculas) {
-        this.peliculas = peliculas;
-    }
     
     
 }

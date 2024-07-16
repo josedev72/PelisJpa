@@ -3,6 +3,7 @@ G:\source\repos\netbeans19-projects\webjpa\src\main\java\logica\Usuario.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\logica\Estrellas.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\org\josedev72\webjpa\servlets\SvListarPeliculas.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\org\josedev72\webjpa\servlets\SvUsuariosEliminar.java
+G:\source\repos\netbeans19-projects\webjpa\src\main\java\org\josedev72\webjpa\servlets\SvPeliculas.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\persistencia\exceptions\NonexistentEntityException.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\org\josedev72\webjpa\servlets\SvUsuarios.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\logica\Pelicula.java
@@ -17,3 +18,4 @@ G:\source\repos\netbeans19-projects\webjpa\src\main\java\logica\Director.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\persistencia\exceptions\PreexistingEntityException.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\org\josedev72\webjpa\servlets\SvListarUsuarios.java
 G:\source\repos\netbeans19-projects\webjpa\src\main\java\org\josedev72\webjpa\servlets\SvListarDirectores.java
+G:\source\repos\netbeans19-projects\webjpa\src\main\java\org\josedev72\webjpa\servlets\SvObtenerDirectorEstrellas.java

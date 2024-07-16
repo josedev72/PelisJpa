@@ -1,4 +1,3 @@
-
 package logica;
 
 import java.io.Serializable;
@@ -6,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import lombok.Data;
 
 @Entity
@@ -21,28 +18,23 @@ public class Pelicula implements Serializable {
     private int genero;
     private int calificacion;
     private int anio;
-
-    @ManyToOne
-    private Estrellas estrellas;
-
-    @ManyToOne
-    @JoinColumn(name = "director_id")
-    private Director director;
+    private int id_estrellas;
+    private int id_director;
 
     public Pelicula() {
     }
 
-    public Pelicula(Long id, String nombre, String descripcion, int genero, int calificacion, int anio, Estrellas estrellas, Director director) {
+    public Pelicula(Long id, String nombre, String descripcion, int genero, int calificacion, int anio, int id_estrellas, int id_director) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.genero = genero;
         this.calificacion = calificacion;
         this.anio = anio;
-        this.estrellas = estrellas;
-        this.director = director;
+        this.id_estrellas = id_estrellas;
+        this.id_director = id_director;
     }
-
+    
     public Long getId() {
         return id;
     }
@@ -78,11 +70,11 @@ public class Pelicula implements Serializable {
     public int getCalificacion() {
         return calificacion;
     }
-
+    
     public void setCalificacion(int calificacion) {
         this.calificacion = calificacion;
     }
-
+    
     public int getAnio() {
         return anio;
     }
@@ -90,22 +82,21 @@ public class Pelicula implements Serializable {
     public void setAnio(int anio) {
         this.anio = anio;
     }
-
-    public Estrellas getEstrellas() {
-        return estrellas;
+    
+    public int getId_estrellas() {
+        return id_estrellas;
     }
 
-    public void setEstrellas(Estrellas estrellas) {
-        this.estrellas = estrellas;
-    }
-
-    public Director getDirector() {
-        return director;
-    }
-
-    public void setDirector(Director director) {
-        this.director = director;
+    public void setId_estrellas(int id_estrellas) {
+        this.id_estrellas = id_estrellas;
     }
     
+    public int getId_director() {
+        return id_director;
+    }
+
+    public void setId_director(int id_director) {
+        this.id_director = id_director;
+    }
     
 }

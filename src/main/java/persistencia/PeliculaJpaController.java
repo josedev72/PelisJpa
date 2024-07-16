@@ -9,7 +9,6 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import logica.Director;
 import logica.Pelicula;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -27,23 +26,14 @@ public class PeliculaJpaController implements Serializable {
     public PeliculaJpaController() {
         emf = Persistence.createEntityManagerFactory("webjpaPU");
     }
-
     
+
     public void create(Pelicula pelicula) {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Director director = pelicula.getDirector();
-            if (director != null) {
-                director = em.getReference(director.getClass(), director.getId());
-                pelicula.setDirector(director);
-            }
             em.persist(pelicula);
-            if (director != null) {
-                director.getPeliculas().add(pelicula);
-                director = em.merge(director);
-            }
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -57,22 +47,7 @@ public class PeliculaJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Pelicula persistentPelicula = em.find(Pelicula.class, pelicula.getId());
-            Director directorOld = persistentPelicula.getDirector();
-            Director directorNew = pelicula.getDirector();
-            if (directorNew != null) {
-                directorNew = em.getReference(directorNew.getClass(), directorNew.getId());
-                pelicula.setDirector(directorNew);
-            }
             pelicula = em.merge(pelicula);
-            if (directorOld != null && !directorOld.equals(directorNew)) {
-                directorOld.getPeliculas().remove(pelicula);
-                directorOld = em.merge(directorOld);
-            }
-            if (directorNew != null && !directorNew.equals(directorOld)) {
-                directorNew.getPeliculas().add(pelicula);
-                directorNew = em.merge(directorNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -101,11 +76,6 @@ public class PeliculaJpaController implements Serializable {
                 pelicula.getId();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The pelicula with id " + id + " no longer exists.", enfe);
-            }
-            Director director = pelicula.getDirector();
-            if (director != null) {
-                director.getPeliculas().remove(pelicula);
-                director = em.merge(director);
             }
             em.remove(pelicula);
             em.getTransaction().commit();
