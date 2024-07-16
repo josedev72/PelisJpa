@@ -273,7 +273,7 @@ input {
     padding-inline: 2px;
 }
 
-input[type="text" i] {
+input[type="text"] {
     padding-block: 1px;
     padding-inline: 2px;
 }

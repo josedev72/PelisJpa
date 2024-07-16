@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import logica.Controladora;
 import logica.Pelicula;
 
-@WebServlet("/")
+@WebServlet("/home")
 public class SvIndex extends HttpServlet {
 
     Controladora control = new Controladora();
@@ -27,6 +27,8 @@ public class SvIndex extends HttpServlet {
             throws ServletException, IOException {
         // Obtener la lista de películas desde la capa de servicio
         List<Pelicula> listaPeliculas = control.traerPeliculas();
+        
+        System.out.println("En mi servlet, listaPeliculas" + listaPeliculas);
 
         // Agregar la lista de películas al request
         request.setAttribute("listaPeliculas", listaPeliculas);

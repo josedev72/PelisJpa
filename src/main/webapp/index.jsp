@@ -81,24 +81,6 @@
             
             
             
-            <%
-                List<Pelicula> listaPeliculas = (List<Pelicula>)request.getAttribute("listaPeliculas");
-                if (listaPeliculas != null && !listaPeliculas.isEmpty()) {
-                    for (Pelicula pelicula : listaPeliculas) { %>
-                        <div class="peliculas">
-                            <a href="pages/info.html">
-                                <div class="pelicula">
-                                    <img class="imgTendencia" src="<%= pelicula.getId() %>" alt="<%= pelicula.getNombre() %>" loading="lazy">
-                                    <div class="tituloPelicula">
-                                        <h4><%= pelicula.getDescripcion() %></h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    <% }
-                }  
-            %>
-            
             
             <div class="peliculas" id="tendenciasContainer">
                 <div class="peliculas">
