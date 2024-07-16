@@ -1,5 +1,6 @@
 <%-- Autor: josedev72 --%>
 
+<%@page import="logica.Pelicula"%>
 <%@page import="logica.Usuario"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -77,6 +78,28 @@
 
         <section id="tendencias" class="peliculasTendencia">
             <h3 class="tituloSection">Las tendencias de hoy</h3>
+            
+            
+            
+            <%
+                List<Pelicula> listaPeliculas = (List<Pelicula>)request.getAttribute("listaPeliculas");
+                if (listaPeliculas != null && !listaPeliculas.isEmpty()) {
+                    for (Pelicula pelicula : listaPeliculas) { %>
+                        <div class="peliculas">
+                            <a href="pages/info.html">
+                                <div class="pelicula">
+                                    <img class="imgTendencia" src="<%= pelicula.getId() %>" alt="<%= pelicula.getNombre() %>" loading="lazy">
+                                    <div class="tituloPelicula">
+                                        <h4><%= pelicula.getDescripcion() %></h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <% }
+                }  
+            %>
+            
+            
             <div class="peliculas" id="tendenciasContainer">
                 <div class="peliculas">
                     <a href="pages/info.html">
@@ -172,6 +195,9 @@
                     </a>
                 </div>
             </div>
+            <!-- fin tendencias -->
+            
+            
             <button class="boton">Anterior</button>
             <button class="boton">Siguiente</button>
         </section>
