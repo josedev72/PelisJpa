@@ -26,7 +26,7 @@
             </div>
             
             <div class="col-12 text-left">
-                <a href="nuevoDirector.html" class="btn btn-success">Nuevo Director</a>
+                <a href="registrarDirector.html" class="btn btn-success">Nuevo Director</a>
             </div>
             
         </div>

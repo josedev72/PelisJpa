@@ -47,4 +47,8 @@ public class Controladora {
     public List<Estrellas> traerEstrellas() {
         return controlPersis.traerEstrellas();
     }
+
+    public void crearDirector(Director director) {
+        controlPersis.crearDirector(director);
+    }
 }

@@ -59,4 +59,8 @@ public class ControladoraPersistencia {
     public List<Estrellas> traerEstrellas() {
         return estrellasJPA.findEstrellasEntities();
     }
+
+    public void crearDirector(Director director) {
+        direJPA.create(director);
+    }
 }

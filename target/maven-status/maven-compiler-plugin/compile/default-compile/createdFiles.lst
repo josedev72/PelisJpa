@@ -3,6 +3,7 @@ org\josedev72\webjpa\servlets\SvPeliculas.class
 logica\Estrellas_.class
 org\josedev72\webjpa\servlets\SvListarUsuarios.class
 logica\Pelicula.class
+org\josedev72\webjpa\servlets\SvDirectores.class
 org\josedev72\webjpa\servlets\SvObtenerDirectorEstrellas.class
 persistencia\UsuarioJpaController.class
 persistencia\PeliculaJpaController.class
