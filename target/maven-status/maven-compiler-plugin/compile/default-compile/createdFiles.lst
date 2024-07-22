@@ -23,6 +23,7 @@ logica\Usuario_.class
 org\josedev72\webjpa\servlets\SvListarDirectores.class
 org\josedev72\webjpa\servlets\SvUsuarios.class
 logica\Director.class
+org\josedev72\webjpa\servlets\SvIndex.class
 logica\Director_.class
 persistencia\exceptions\NonexistentEntityException.class
 org\josedev72\webjpa\servlets\SvUsuariosEditar.class

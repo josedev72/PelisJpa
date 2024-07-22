@@ -79,14 +79,14 @@
         <section id="tendencias" class="peliculasTendencia">
             <h3 class="tituloSection">Las tendencias de hoy</h3>
             
+            <div class="peliculas">
             
-            
-            <!<!-- Inicio Tendencias -->
-            <div class="peliculas" id="tendenciasContainer">
+                <!<!-- Inicio Tendencias -->
+                <div class="peliculas" id="tendenciasContainer">
 
-                <div id="contenedor-peliculas"></div>
-            </div>
-                
+                    <div id="contenedor-peliculas"></div>
+                </div>
+            </div>    
             <!-- fin Tendencias -->
             
             
