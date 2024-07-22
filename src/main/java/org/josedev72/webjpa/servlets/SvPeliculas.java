@@ -52,6 +52,7 @@ public class SvPeliculas extends HttpServlet {
         long id =0;
         String nombre = request.getParameter("nombre");
         String descripcion = request.getParameter("descripcion");
+        String urlImagen = request.getParameter("urlImagen");
         int genero = Integer.parseInt(request.getParameter("genero"));
         int calificacion = Integer.parseInt(request.getParameter("calificacion"));
         int anio = Integer.parseInt(request.getParameter("anio"));
@@ -60,7 +61,7 @@ public class SvPeliculas extends HttpServlet {
         
         
         
-        Pelicula peli = new Pelicula(Long.parseLong("0"),nombre, descripcion, genero, calificacion, anio, estrellas,director);
+        Pelicula peli = new Pelicula(Long.parseLong("0"),nombre, descripcion, urlImagen, genero, calificacion, anio, estrellas,director);
         
         System.out.println("Peli: " + peli);
         control.crearPelicula(peli);

@@ -1,3 +1,4 @@
+
 package persistencia;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.Pelicula;
 import persistencia.exceptions.NonexistentEntityException;
+
 
 public class PeliculaJpaController implements Serializable {
 
@@ -26,6 +28,7 @@ public class PeliculaJpaController implements Serializable {
     public PeliculaJpaController() {
         emf = Persistence.createEntityManagerFactory("webjpaPU");
     }
+    
     
 
     public void create(Pelicula pelicula) {

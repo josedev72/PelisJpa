@@ -14,14 +14,15 @@ persistencia\exceptions\PreexistingEntityException.class
 persistencia\ControladoraPersistencia.class
 persistencia\EstrellasJpaController.class
 persistencia\exceptions\IllegalOrphanException.class
+org\josedev72\webjpa\servlets\SvObtenerPeliculas.class
 org\josedev72\webjpa\servlets\SvUsuariosEliminar.class
+org\josedev72\webjpa\servlets\SvObtenerUsuarios.class
 persistencia\DirectorJpaController.class
 logica\Controladora.class
 logica\Usuario_.class
 org\josedev72\webjpa\servlets\SvListarDirectores.class
 org\josedev72\webjpa\servlets\SvUsuarios.class
 logica\Director.class
-org\josedev72\webjpa\servlets\SvIndex.class
 logica\Director_.class
 persistencia\exceptions\NonexistentEntityException.class
 org\josedev72\webjpa\servlets\SvUsuariosEditar.class

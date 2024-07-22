@@ -3,7 +3,7 @@
 <%@page import="logica.Pelicula"%>
 <%@page import="logica.Usuario"%>
 <%@page import="java.util.List"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="estas">
 <head>
@@ -81,103 +81,13 @@
             
             
             
-            
+            <!<!-- Inicio Tendencias -->
             <div class="peliculas" id="tendenciasContainer">
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\dune.jpg" alt="Dune: Part Two" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>Dune: Part Two</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\kung fu panda.jpg" alt="Kung Fu Panda 4" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>Kung Fu Panda 4</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\godzilla x kingkong.jpg" alt="Godzilla x Kong: The New Empire" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>Godzilla x Kong: The New Empire</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\alienoid.jpg" alt="Alienoid" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>Alienoid</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\roadhouse.jpg" alt="Road House" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>Road House</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\wages.jpg" alt="The Wages of Fear" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>The Wages of Fear</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\after the pandemic.jpg" alt="After the Pandemic" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>After the Pandemic</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\madame web.jpg" alt="Madame Web" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>Madame Web</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="peliculas">
-                    <a href="pages/info.html">
-                        <div class="pelicula">
-                            <img class="imgTendencia" src="assets\img\peliculas\migration.jpg" alt="Migration" loading="lazy">
-                            <div class="tituloPelicula">
-                                <h4>Migration</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <div id="contenedor-peliculas"></div>
             </div>
-            <!-- fin tendencias -->
+                
+            <!-- fin Tendencias -->
             
             
             <button class="boton">Anterior</button>
@@ -243,6 +153,8 @@
 
             </div>
         </section>
+        
+        
 
     </main>
 
@@ -251,5 +163,11 @@
     <script src="js/pie.js"></script>
 
     <script src="js/saludo.js"></script>
+    
+    <script src="js/cargarPeliculas.js"></script>
+    
+    <<script>
+        
+    </script>
 </body>
 </html>
